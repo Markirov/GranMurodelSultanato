@@ -1,3 +1,7 @@
+- [x] **Keywords TOUGH, FEAR, LEADER, SKIRMISHER, FLYING y ARTIFICIAL según el glosario canon 1.0.2** (2026-10-01, Lead Developer (Claude), Petición de Marcos "Sí, alinea las keywords con el glosario"):
+  - `ABILITY_LIBRARY` (`02`) y `KEYWORD_LIBRARY` (`04`) llevaban resúmenes propios que contradecían el reglamento (p. ej. TOUGH "−1 INJURY DICE" cuando el canon es "el primer Out of Action cuenta como Down"; FEAR como prueba de Moral; SKIRMISHER "+1\" Movement"). Ahora llevan el texto de `KEYWORD_GLOSSARY` (fuente única); `public/js` regenerado con `build-legacy-data.js`.
+  - Test nuevo `tests/test_keywords_canon_glossary.js` (18 ✓), visto en rojo antes (12 ✗).
+  - `verify.sh`: 194 suites · 4000 verificaciones · 0 fallos.
 - [x] **Escudo + STRONG + arma Melee 2H sin Shield Combo** (2026-10-01, Lead Developer (Antigravity), Petición de Marcos "Vamos con el punto 1"):
   1. **Validación Canónica (Changelog 1.0.2 p. 57, Rulebook p. 69):**
      - La keyword `STRONG` (*can equip and use one 2-Handed Melee Weapon as if it were a 1-Handed Melee Weapon*) permite equipar simultáneamente un escudo y un arma cuerpo a cuerpo a dos manos sin `CUMBERSOME`, incluso si ninguno de los dos tiene la estipulación `Shield Combo`.

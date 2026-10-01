@@ -21,7 +21,7 @@
 - **Regla canónica Escudo + STRONG + arma 2H Melee sin CUMBERSOME activa y testeada formalmente** (`test_strong_shield_combo.js`, 11 ✓).
 - **Migración a React - Fase 3 (Roster y Detalles) completada y archivada.**
 - Modo Mesa interactivo con regla TOUGH activa/gastable y desgloses tácticos completos.
-- Suite de pruebas completa: **193 suites · 3977 verificaciones · 0 fallos** (`verify.sh`).
+- Suite de pruebas completa: **194 suites · 4000 verificaciones · 0 fallos** (`verify.sh`).
 - Build limpio: `npm run lint` (0 warnings), `npx tsc --noEmit` (0 errors), `npm run build` exitoso con Turbopack.
 
 ## Decisiones vigentes (y por qué)

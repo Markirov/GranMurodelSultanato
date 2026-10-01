@@ -757,7 +757,7 @@ const ABILITY_LIBRARY = {
   /* ─── KEYWORDS CORE TC: el texto se sincroniza con KEYWORD_GLOSSARY ─── */
   'TOUGH': {
     type: 'keyword',
-    summary: '−1 INJURY DICE a las tiradas de lesión contra este modelo.',
+    summary: 'La primera vez que el modelo sufre un resultado de Out of Action en la Injury Table, se trata como Down.',
   },
   'STRONG': {
     type: 'keyword',
@@ -765,7 +765,7 @@ const ABILITY_LIBRARY = {
   },
   'FEAR': {
     type: 'keyword',
-    summary: 'Modelos enemigos que vayan a cargar/atacar a este modelo deben pasar un Risky Success Roll o pierden la acción.',
+    summary: '-1 DICE a los ataques cuerpo a cuerpo contra un modelo con esta keyword. Los modelos que causan FEAR son inmunes a FEAR.',
   },
   'INFILTRATOR': {
     type: 'keyword',
@@ -773,7 +773,7 @@ const ABILITY_LIBRARY = {
   },
   'LEADER': {
     type: 'keyword',
-    summary: 'Modelos amigos a 6" pueden usar el Morale del Leader para Morale Checks. Bonus de mando.',
+    summary: '+1 DICE a los Morale Checks si la banda tiene en el campo al menos un modelo con esta keyword que no esté Down ni Out of Action.',
   },
   'ELITE': {
     type: 'tier',
@@ -783,15 +783,15 @@ const ABILITY_LIBRARY = {
   'MERCENARY': { type: 'tier', summary: '' },
   'ARTIFICIAL': {
     type: 'keyword',
-    summary: 'Construcción/criatura artificial: inmune a FEAR, INFECTION MARKERS y efectos psicológicos.',
+    summary: 'El modelo no es de origen biológico natural: está construido con elementos no orgánicos.',
   },
   'SKIRMISHER': {
     type: 'keyword',
-    summary: '+1" al stat Movement. Puede moverse a través de modelos amigos.',
+    summary: 'Si un enemigo elige a este modelo como objetivo de una carga, puedes esquivar antes de la carga si no está a 1" de un enemigo: tira D3 y muévelo esa distancia, terminando a más de 1" de todos los enemigos. Si tras esquivar queda un modelo interpuesto, el que carga debe elegirlo como objetivo.',
   },
   'FLYING': {
     type: 'keyword',
-    summary: 'Movimiento aéreo: ignora terreno y obstáculos en movimiento normal.',
+    summary: 'Al mover, retirarse o cargar, la trayectoria se mide "por el aire"; debe terminar sobre el campo de batalla o una pieza de escenografía. Sigue haciendo la Risky Success Roll si se activa o termina en terreno peligroso y no puede terminar en terreno infranqueable. No hace Injury Roll si cae.',
   },
 
   /* ─── FACTION TAGS (sin desc canon, kind interno) ─── */
