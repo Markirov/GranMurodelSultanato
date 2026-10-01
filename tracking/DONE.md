@@ -1,3 +1,18 @@
+- [x] **Escudo + STRONG + arma Melee 2H sin Shield Combo** (2026-10-01, Lead Developer (Antigravity), Petición de Marcos "Vamos con el punto 1"):
+  1. **Validación Canónica (Changelog 1.0.2 p. 57, Rulebook p. 69):**
+     - La keyword `STRONG` (*can equip and use one 2-Handed Melee Weapon as if it were a 1-Handed Melee Weapon*) permite equipar simultáneamente un escudo y un arma cuerpo a cuerpo a dos manos sin `CUMBERSOME`, incluso si ninguno de los dos tiene la estipulación `Shield Combo`.
+     - Además, el modelo puede equipar hasta 1 arma a distancia a 1 mano (respetando el límite de 1 Melee 1H + 1 Ranged 1H con escudo).
+     - Las armas cuerpo a cuerpo a 2 manos con `CUMBERSOME` (*require two hands to use, even if the model has the STRONG Keyword*) siguen requiriendo obligatoriamente `Shield Combo` en arma y escudo.
+     - Las armas a distancia a 2 manos (Rifles, etc.) no se benefician de `STRONG` y siguen exigiendo `Shield Combo`.
+     - Con escudo equipado, un modelo con `STRONG` solo puede portar 1 arma melee en total (el arma 2H tratada como 1H ocupa la única mano melee disponible).
+  2. **Ajuste en Motor y Verificación en Código:**
+     - Corregido y asegurado en `app/lib/battlekit_legality_engine.ts` y `public/js/22_battlekit_legality_engine.js` (`isStrongOverride` y cálculo de `meleeHands` con exclusión de `hasCumbersome2H`).
+  3. **Suite Dedicada y Calidad:**
+     - Creada suite formal `tests/test_strong_shield_combo.js` validando los 5 criterios de aceptación (11 ✓).
+     - Total tests: **193 suites · 3977 verificaciones · 0 fallos**.
+     - TypeScript y ESLint al 100% limpios. Build Next.js Turbopack validado.
+     - Actualizado `tracking/AUDIT.md` resolviendo la deuda técnica activa.
+
 - [x] **Migración a React (Next.js) - Cierre formal de Fase 3 (Roster y Detalles)** (2026-10-01, Lead Developer (Antigravity), Petición de Marcos "Termina con la fase 3"):
   1. **Consolidación del Roster en React (`app/(app)/bandas/roster/`):**
      - Header interactivo con edición de nombre en tiempo real, contador de Ducados y Gloria con bloqueo de saldo negativo, modal de ajuste de presupuesto y accesos directos a Modo Mesa, Jugar Partida, exportar/importar Companion.

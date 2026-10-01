@@ -816,7 +816,13 @@ function classifyBattlekitItem(item, model, unit, wb) {
     const ranged = countModelRangedWeapons(wb, model);
     const shieldMelee = upWeaponLimits ? upWeaponLimits.shieldMeleeMax : 1;
     const shieldRanged = upWeaponLimits ? upWeaponLimits.rangedMax : 1;
-    const meleeHands = melee.count1H + (isStrong ? melee.count2H : melee.count2H * 2);
+    const hasCumbersome2H = (model.battlekit || []).some(kid => {
+      const eit = findBattlekitItem(wb.factionId, kid, wb);
+      return eit && eit.type === '2-Handed' &&
+             getArmouryCategory(wb.factionId, kid) === 'melee' &&
+             itemHasWeaponKeyword(eit, 'CUMBERSOME');
+    });
+    const meleeHands = melee.count1H + ((isStrong && !hasCumbersome2H) ? melee.count2H : melee.count2H * 2);
     if (meleeHands > shieldMelee) {
       return { state: 'disabled',
         reason: 'Con escudo: máx ' + shieldMelee + ' arma(s) melee (quita una primero)' };

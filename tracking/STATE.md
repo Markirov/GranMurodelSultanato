@@ -18,9 +18,10 @@
   - Documentada la Gun Battery (`gun-battery-iw`) en `Tc_Tc_Miniaturas.md`.
 - Variantes y Sub-facciones canónicas 1.0.2 activas (Fireteams interactivos, Envious Eyes, hechizos gratuitos, límites dinámicos, Abyssinia "Chewa & ELITE only").
 - Sincronización en la nube bidireccional (Cloud Firestore) activa: motor `sync_engine.ts` y `.js` con resolución LWW y marcas de borrado (tombstones `warband-forge-deleted`).
-- **Migración a React - Fase 3 (Roster y Detalles) completada y archivada:** Roster interactivo con 4 Contenedores de Capacidad, tabs temáticos ("Armería"/"Bazar"), reclutamiento con UnitMarket y enriquecimiento canónico de equipo y miniaturas.
+- **Regla canónica Escudo + STRONG + arma 2H Melee sin CUMBERSOME activa y testeada formalmente** (`test_strong_shield_combo.js`, 11 ✓).
+- **Migración a React - Fase 3 (Roster y Detalles) completada y archivada.**
 - Modo Mesa interactivo con regla TOUGH activa/gastable y desgloses tácticos completos.
-- Suite de pruebas completa: **192 suites · 3973 verificaciones · 0 fallos** (`verify.sh`).
+- Suite de pruebas completa: **193 suites · 3977 verificaciones · 0 fallos** (`verify.sh`).
 - Build limpio: `npm run lint` (0 warnings), `npx tsc --noEmit` (0 errors), `npm run build` exitoso con Turbopack.
 
 ## Decisiones vigentes (y por qué)
