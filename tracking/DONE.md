@@ -1,3 +1,17 @@
+- [x] **Migración a React (Next.js) - Cierre formal de Fase 3 (Roster y Detalles)** (2026-10-01, Lead Developer (Antigravity), Petición de Marcos "Termina con la fase 3"):
+  1. **Consolidación del Roster en React (`app/(app)/bandas/roster/`):**
+     - Header interactivo con edición de nombre en tiempo real, contador de Ducados y Gloria con bloqueo de saldo negativo, modal de ajuste de presupuesto y accesos directos a Modo Mesa, Jugar Partida, exportar/importar Companion.
+     - `RosterList.tsx` con soporte para listado de modelos, peanas, roles, badges de coste, reordenación y etiquetas visuales de Fireteams.
+     - `UnitMarket.tsx` con catálogo de reclutamiento filtrado por roles (Líder, Élite, Tropa), validación de presupuesto y control de límites de unidad.
+     - `ModelDetails.tsx` (>1.600 líneas) con los 4 Contenedores de Capacidad (Armas 1H, Armas 2H, Armaduras/Escudos, Equipo/Munición), modos temáticos Armería vs Bazar por facción, chips de modificadores de combate (`ARM -X`), banner `BULKY`, inmunidades activas, acciones tácticas (`Treat ACTION`, `Spotter ACTION`, etc.), munición especial y soporte de Envious Eyes.
+  2. **Archivado de Objetivo (§1.5):**
+     - Trasladado `tracking/goals/GOAL_migracion_fase_3.md` a `tracking/plans/2026-10-01_GOAL_migracion_fase_3.md` con todos sus criterios de éxito certificados.
+     - Backlog en `tracking/PENDING.md` actualizado liberando el lock y moviendo la tarea a `## ✅ Completado`.
+  3. **Verificación y Calidad:**
+     - 192 suites · 3973 verificaciones · 0 fallos en la suite de pruebas.
+     - TypeScript (`npx tsc --noEmit`) y ESLint (`npm run lint`) limpios sin errores ni warnings.
+     - Build de producción Turbopack (`npm run build`) validado.
+
 - [x] **Pipeline Generador y Sincronizador Automatizado Tc_Tc_*.md → app/data/*.ts** (2026-10-01, Lead Developer (Antigravity), Petición de Marcos "Opción 1: Pipeline Generador Automatizado"):
   1. **Plan de Implementación Aprobado:**
      - Creado y ejecutado `tracking/plans/PLAN_2026-10-01_generador_md_a_ts.md` estructurado en 4 fases (Parsers, Comparador/Sincronizador, Integración en Pipeline y Verificación).

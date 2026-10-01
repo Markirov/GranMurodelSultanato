@@ -1,5 +1,8 @@
 # GOAL: Migración a React - Fase 3 (Roster, Detalles y Tienda)
 
+> **Estado:** Completado y Verificado (2026-10-01)  
+> **Archivado desde:** `tracking/goals/GOAL_migracion_fase_3.md`  
+
 ## Objetivo
 Migrar la lógica completa de edición de bandas (Roster, Detalles de Unidad, Tienda y Variantes) a componentes de React, apoyándose en un modelo de datos compartido entre Next.js y el simulador de Vanilla JS.
 
@@ -22,3 +25,4 @@ Migrar la lógica completa de edición de bandas (Roster, Detalles de Unidad, Ti
 
 ## Registro de Intentos
 - **Intento 1:** Fase 3.1 y gran parte de la 3.2 completadas con éxito y 0 roturas usando `scripts/build-legacy-data.js`.
+- **Intento 2:** Cierre formal. Enriquecimiento canónico completo de armas, armaduras, equipo, 4 contenedores de capacidad, bazar reactivo y tests al 100% (192 suites · 3973 verificaciones · 0 fallos).
